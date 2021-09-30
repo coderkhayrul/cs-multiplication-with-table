@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task Multiplication</title>
+</head>
+<style>
+    table {
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 5px;
+    }
+
+    tr {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <script>
+        // default Value 'Empty'
+        var data = '';
+        // Table Start
+        data += '<table border="5" width="100%">';
+        for (i = 0; i <= 10; i++) {
+
+            for (j = 0; j <= 10; j++) {
+                if (i == 0 && j > 0) {
+                    // Table Rows
+                    data += '<th>' + j + '</th>';
+
+                } else if (j == 0 && i > 0) {
+                    // Table Columns
+                    data += '<tr><th>' + i + '</th></tr>';
+
+                } else if (i > 0 && j > 0) {
+                    // Get All Result
+                    data += '<td>' + (i * j) + '</td>';
+
+                }
+            }
+        }
+        data += '</table>';
+        // Table End
+        // Task Title
+        document.write('<h1 style="text-align:center">Show Multiplication Into JavaScript</h1>');
+        document.write(data);
+    </script>
+
+</body>
+
+</html>
